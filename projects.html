@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Rivera | Projects</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header id="top">
+    <h1>Alex Rivera &ndash; Projects</h1>
+    <p><strong>Open-Source Tools, Systems Architecture &amp; Engineering Projects</strong></p>
+    <p>A portfolio of distributed systems, developer utilities, and backend engineering work.</p>
+
+    <nav aria-label="Page Navigation">
+      <p>
+        <a href="index.html">Home (Main Page)</a> |
+        <a href="resume.html">Resume</a> |
+        <a href="projects.html" aria-current="page">Projects</a> |
+        <a href="#featured">Featured Projects</a> |
+        <a href="#all-projects">Project Catalog</a>
+      </p>
+    </nav>
+    <p><a href="index.html">&larr; Back to Main Page</a></p>
+  </header>
+
+  <hr>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Featured Projects Section -->
+    <section id="featured">
+      <h2>Featured Projects</h2>
+
+      <!-- Project 1: KubeScope -->
+      <article id="kubescope">
+        <h3>1. KubeScope &ndash; Kubernetes Cluster Resource Auditor</h3>
+        <p>
+          A fast, lightweight command-line tool written in Go that inspects Kubernetes clusters for misconfigured
+          resource requests and limits, unhealthy pod workloads, orphaned persistent volumes, and stale deployments.
+        </p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Interactive and JSON-formatted reports analyzing cluster-wide resource efficiency.</li>
+          <li>Out-of-the-box recommendations for right-sizing pod CPU and memory requests.</li>
+          <li>Pluggable rules engine built with Go client-go and Cobra CLI framework.</li>
+          <li>Easily integrates into CI/CD pipelines via GitHub Actions.</li>
+        </ul>
+        <p>
+          <strong>Technologies:</strong> Go, client-go, Cobra, Kubernetes API, GitHub Actions, Docker<br>
+          <strong>Links:</strong>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code</a> |
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Documentation</a>
+        </p>
+      </article>
+
+      <hr>
+
+      <!-- Project 2: MiniKV -->
+      <article id="minikv">
+        <h3>2. MiniKV &ndash; Embedded LSM-Tree Key-Value Store</h3>
+        <p>
+          An educational Log-Structured Merge-tree (LSM-tree) storage engine implemented in Rust to study
+          Write-Ahead Log (WAL) crash recovery, SSTable compaction strategies, and Bloom filter optimizations.
+        </p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>MemTable implementation backed by a lock-free SkipList for concurrent in-memory writes.</li>
+          <li>Write-Ahead Logging with checksum verification ensuring durability against unexpected power loss.</li>
+          <li>Size-tiered compaction strategy to bound read amplification and reclaim disk space.</li>
+          <li>Block-level Bloom filters reducing unnecessary disk reads for non-existent keys.</li>
+        </ul>
+        <p>
+          <strong>Technologies:</strong> Rust, Concurrency, File I/O, Data Structures, Benchmarking<br>
+          <strong>Links:</strong>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code</a> |
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Technical Writeup</a>
+        </p>
+      </article>
+
+      <hr>
+
+      <!-- Project 3: TraceFlow -->
+      <article id="traceflow">
+        <h3>3. TraceFlow &ndash; OpenTelemetry Pipeline Simulator</h3>
+        <p>
+          Synthetic distributed trace generator and benchmarking suite designed to validate OpenTelemetry collectors,
+          agents, and backend storage engines under extreme traffic spikes and bursty network conditions.
+        </p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Simulates complex microservice topologies with customizable call depths and error injection rates.</li>
+          <li>Exports spans in OTLP/gRPC and OTLP/HTTP protocols with configurable sampling rates.</li>
+          <li>Provides real-time throughput and latency metrics comparing collector resource utilization.</li>
+          <li>Fully packaged with Docker Compose for local development and integration tests.</li>
+        </ul>
+        <p>
+          <strong>Technologies:</strong> Python, Asyncio, OpenTelemetry SDK, gRPC, Docker, Prometheus<br>
+          <strong>Links:</strong>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code</a> |
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Documentation</a>
+        </p>
+      </article>
+
+      <hr>
+
+      <!-- Project 4: NetPulse -->
+      <article id="netpulse">
+        <h3>4. NetPulse &ndash; eBPF Network Latency &amp; Packet Monitor</h3>
+        <p>
+          A low-overhead Linux kernel observability tool that leverages eBPF (extended Berkeley Packet Filter)
+          to measure TCP connection round-trip times and identify packet drops without application code modification.
+        </p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Attaches kernel probes to TCP state machine transitions with sub-microsecond overhead.</li>
+          <li>Exports Prometheus metrics for TCP retransmissions, SYN backlog queue saturation, and socket latency.</li>
+          <li>Lightweight Go userspace daemon for metric aggregation and filtering.</li>
+        </ul>
+        <p>
+          <strong>Technologies:</strong> Go, C, eBPF, Linux Kernel, Prometheus, Grafana<br>
+          <strong>Links:</strong>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code</a> |
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Architecture Spec</a>
+        </p>
+      </article>
+    </section>
+
+    <hr>
+
+    <!-- Project Catalog / Summary Table -->
+    <section id="all-projects">
+      <h2>Project Catalog &amp; Summary</h2>
+
+      <table border="1" cellpadding="8" cellspacing="0">
+        <caption>Summary of Projects</caption>
+        <thead>
+          <tr>
+            <th scope="col">Project Name</th>
+            <th scope="col">Primary Language</th>
+            <th scope="col">Domain</th>
+            <th scope="col">License</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>KubeScope</td>
+            <td>Go</td>
+            <td>Cloud Infrastructure &amp; Kubernetes</td>
+            <td>Apache 2.0</td>
+            <td>Active</td>
+          </tr>
+          <tr>
+            <td>MiniKV</td>
+            <td>Rust</td>
+            <td>Database &amp; Storage Engines</td>
+            <td>MIT</td>
+            <td>Stable</td>
+          </tr>
+          <tr>
+            <td>TraceFlow</td>
+            <td>Python</td>
+            <td>Observability &amp; Testing</td>
+            <td>Apache 2.0</td>
+            <td>Active</td>
+          </tr>
+          <tr>
+            <td>NetPulse</td>
+            <td>Go / C</td>
+            <td>Networking &amp; eBPF</td>
+            <td>GPL v2</td>
+            <td>In Development</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      &copy; 2026 Alex Rivera. All rights reserved.
+      &bull; Built strictly with semantic HTML.
+      &bull; <a href="index.html">Back to Main Page</a>
+      &bull; <a href="#top">Back to top</a>
+    </p>
+  </footer>
+
+</body>
+
+</html>
