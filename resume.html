@@ -10,68 +10,67 @@
 
 <body>
 
-  <!-- Header Section -->
-  <header id="top">
-    <h1>Alex Rivera &ndash; Resume</h1>
-    <p><strong>Senior Software Engineer &amp; Systems Architect</strong></p>
-    <p>Designing reliable distributed systems, developer tools, and high-throughput data platforms.</p>
-
-    <nav aria-label="Page Navigation">
-      <p>
-        <a href="index.html">Home (Main Page)</a> |
-        <a href="resume.html" aria-current="page">Resume</a> |
-        <a href="projects.html">Projects</a> |
-        <a href="#summary">Summary</a> |
-        <a href="#experience">Experience</a> |
-        <a href="#education">Education</a> |
-        <a href="#certifications">Certifications</a> |
-        <a href="#skills">Skills</a>
-      </p>
-    </nav>
-    <p><a href="index.html">&larr; Back to Main Page</a></p>
+  <!-- Dark Grey Header at the Top -->
+  <header class="subpage-header" id="top">
+    <div class="subpage-header-content">
+      <h1 class="subpage-title">Alex Rivera &ndash; Resume</h1>
+      <p class="subpage-subtitle">Senior Software Engineer &amp; Systems Architect &bull; Seattle, WA</p>
+      
+      <nav class="subpage-nav" aria-label="Page Navigation">
+        <a href="index.html" class="subpage-nav-link">&larr; Main Page</a>
+        <a href="resume.html" class="subpage-nav-link active">Resume</a>
+        <a href="projects.html" class="subpage-nav-link">Projects</a>
+        <a href="#summary" class="subpage-nav-link">Summary</a>
+        <a href="#experience" class="subpage-nav-link">Experience</a>
+        <a href="#education" class="subpage-nav-link">Education</a>
+        <a href="#certifications" class="subpage-nav-link">Certifications</a>
+        <a href="#skills" class="subpage-nav-link">Skills</a>
+      </nav>
+    </div>
   </header>
 
-  <hr>
-
-  <!-- Main Content -->
-  <main>
-    <!-- Contact Info -->
-    <section id="contact-info">
-      <h2>Contact Information</h2>
-      <address>
-        <p>
-          <strong>Name:</strong> Alex Rivera<br>
-          <strong>Location:</strong> Seattle, Washington, United States<br>
-          <strong>Email:</strong> <a href="mailto:alex.rivera.example@gmail.com">alex.rivera.example@gmail.com</a><br>
-          <strong>GitHub:</strong> <a href="https://github.com" target="_blank" rel="noopener noreferrer">github.com/alexrivera-dev</a><br>
-          <strong>LinkedIn:</strong> <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">linkedin.com/in/alexrivera-dev</a>
-        </p>
-      </address>
-    </section>
-
-    <hr>
-
-    <!-- Professional Summary -->
-    <section id="summary">
-      <h2>Professional Summary</h2>
-      <p>
+  <!-- Main Content on Light Beige Background -->
+  <main class="subpage-container">
+    <!-- Contact & Summary Section -->
+    <section id="summary" class="subpage-section">
+      <h2 class="subpage-section-title">Professional Summary</h2>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-brown); margin-bottom: 1.5rem;">
         Results-driven Senior Software Engineer and Systems Architect with over 8 years of experience designing,
         deploying, and maintaining resilient distributed architectures, cloud-native infrastructure, and high-throughput
         backend systems. Demonstrated expertise in Go, Python, Rust, and Kubernetes across multi-region environments.
         Passionate about performance optimization, observability, robust developer tooling, and engineering mentorship.
       </p>
+
+      <div class="about-highlights">
+        <div class="highlight-badge">
+          <strong>Email</strong>
+          <span><a href="mailto:alex.rivera.example@gmail.com">alex.rivera.example@gmail.com</a></span>
+        </div>
+        <div class="highlight-badge">
+          <strong>Location</strong>
+          <span>Seattle, Washington, USA</span>
+        </div>
+        <div class="highlight-badge">
+          <strong>LinkedIn</strong>
+          <span><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">alexrivera-dev</a></span>
+        </div>
+        <div class="highlight-badge">
+          <strong>GitHub</strong>
+          <span><a href="https://github.com" target="_blank" rel="noopener noreferrer">alexrivera-dev</a></span>
+        </div>
+      </div>
     </section>
 
-    <hr>
+    <!-- Work Experience Section -->
+    <section id="experience" class="subpage-section">
+      <h2 class="subpage-section-title">Work Experience</h2>
 
-    <!-- Work Experience -->
-    <section id="experience">
-      <h2>Work Experience</h2>
-
-      <article>
-        <h3>Staff Infrastructure Engineer &mdash; CloudScale Technologies</h3>
-        <p><em>July 2022 &ndash; Present | Seattle, WA (Remote)</em></p>
-        <ul>
+      <article class="resume-article">
+        <div class="resume-article-header">
+          <h3 class="resume-role-title">Staff Infrastructure Engineer &mdash; CloudScale Technologies</h3>
+          <p class="resume-company-line">July 2022 &ndash; Present | Seattle, WA (Remote)</p>
+        </div>
+        <ul class="resume-list">
           <li>Architected and implemented a multi-tenant Kubernetes platform hosting 200+ microservices across 3 global cloud regions.</li>
           <li>Spearheaded cluster autoscaling refactoring and node pool optimization that reduced monthly cloud infrastructure spend by 28%.</li>
           <li>Introduced standardized distributed tracing with OpenTelemetry and Jaeger, cutting p99 incident triage time by 45%.</li>
@@ -80,10 +79,14 @@
         </ul>
       </article>
 
-      <article>
-        <h3>Senior Backend Engineer &mdash; Apex Data Systems</h3>
-        <p><em>March 2019 &ndash; June 2022 | San Francisco, CA</em></p>
-        <ul>
+      <hr style="border: none; border-top: 1px solid var(--border-beige); margin: 1.5rem 0;">
+
+      <article class="resume-article">
+        <div class="resume-article-header">
+          <h3 class="resume-role-title">Senior Backend Engineer &mdash; Apex Data Systems</h3>
+          <p class="resume-company-line">March 2019 &ndash; June 2022 | San Francisco, CA</p>
+        </div>
+        <ul class="resume-list">
           <li>Built and scaled high-throughput telemetry ingestion pipeline handling over 1.2 million events per second using Apache Kafka and Go.</li>
           <li>Redesigned relational data schema and caching strategy across PostgreSQL and Redis, decreasing average query latency from 85ms to 12ms.</li>
           <li>Led the development of a cross-platform internal developer CLI in Go, adopted across all 15 engineering squads to streamline CI/CD workflows.</li>
@@ -91,10 +94,14 @@
         </ul>
       </article>
 
-      <article>
-        <h3>Software Engineer &mdash; Beacon Networks</h3>
-        <p><em>June 2016 &ndash; February 2019 | Austin, TX</em></p>
-        <ul>
+      <hr style="border: none; border-top: 1px solid var(--border-beige); margin: 1.5rem 0;">
+
+      <article class="resume-article">
+        <div class="resume-article-header">
+          <h3 class="resume-role-title">Software Engineer &mdash; Beacon Networks</h3>
+          <p class="resume-company-line">June 2016 &ndash; February 2019 | Austin, TX</p>
+        </div>
+        <ul class="resume-list">
           <li>Developed RESTful API endpoints and asynchronous background task queues using Python, Django, and Celery.</li>
           <li>Automated provisioning of integration test environments with Docker Compose and Bash scripts, accelerating test cycles by 40%.</li>
           <li>Participated in 24/7 on-call rotation for critical customer-facing services with an average MTTR of 15 minutes.</li>
@@ -103,14 +110,11 @@
       </article>
     </section>
 
-    <hr>
-
     <!-- Education Section -->
-    <section id="education">
-      <h2>Education</h2>
+    <section id="education" class="subpage-section">
+      <h2 class="subpage-section-title">Education</h2>
 
-      <table border="1" cellpadding="8" cellspacing="0">
-        <caption>Academic Degrees</caption>
+      <table class="data-table">
         <thead>
           <tr>
             <th scope="col">Degree</th>
@@ -121,23 +125,20 @@
         </thead>
         <tbody>
           <tr>
-            <td>Bachelor of Science in Computer Science</td>
+            <td><strong>Bachelor of Science in Computer Science</strong></td>
             <td>University of Washington</td>
             <td>2012 &ndash; 2016</td>
-            <td>Graduated Cum Laude; Focus on Operating Systems, Distributed Systems &amp; Networking</td>
+            <td>Graduated Cum Laude; Focus on Operating Systems &amp; Distributed Systems</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <hr>
-
     <!-- Certifications Section -->
-    <section id="certifications">
-      <h2>Professional Certifications</h2>
+    <section id="certifications" class="subpage-section">
+      <h2 class="subpage-section-title">Professional Certifications</h2>
 
-      <table border="1" cellpadding="8" cellspacing="0">
-        <caption>Industry Credentials</caption>
+      <table class="data-table">
         <thead>
           <tr>
             <th scope="col">Certification</th>
@@ -148,13 +149,13 @@
         </thead>
         <tbody>
           <tr>
-            <td>Certified Kubernetes Administrator (CKA)</td>
+            <td><strong>Certified Kubernetes Administrator (CKA)</strong></td>
             <td>Cloud Native Computing Foundation (CNCF)</td>
             <td>2023</td>
             <td>CKA-2309-8472</td>
           </tr>
           <tr>
-            <td>AWS Certified Solutions Architect &ndash; Professional</td>
+            <td><strong>AWS Certified Solutions Architect &ndash; Professional</strong></td>
             <td>Amazon Web Services (AWS)</td>
             <td>2022</td>
             <td>AWS-SAP-9104</td>
@@ -163,51 +164,57 @@
       </table>
     </section>
 
-    <hr>
+    <!-- Technical Skills Section -->
+    <section id="skills" class="subpage-section">
+      <h2 class="subpage-section-title">Technical Skills</h2>
 
-    <!-- Skills Section -->
-    <section id="skills">
-      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skills-card">
+          <h4>Programming Languages</h4>
+          <ul>
+            <li><strong>Go (Golang):</strong> Concurrency, channels, microservices</li>
+            <li><strong>Python:</strong> Asyncio, FastAPI, Django, data tooling</li>
+            <li><strong>Rust:</strong> Systems programming, safety, memory model</li>
+            <li><strong>TypeScript / JS:</strong> Node.js, frontend integration</li>
+            <li><strong>C / C++:</strong> POSIX APIs, low-level systems</li>
+            <li><strong>SQL &amp; Bash:</strong> PostgreSQL dialect, scripting</li>
+          </ul>
+        </div>
 
-      <h3>Programming Languages</h3>
-      <ul>
-        <li><strong>Go (Golang):</strong> Advanced (Concurrency, Goroutines, Channels, standard library)</li>
-        <li><strong>Python:</strong> Advanced (Asyncio, Django, FastAPI, Celery, NumPy)</li>
-        <li><strong>Rust:</strong> Proficient (Systems programming, memory safety, concurrency, Cargo)</li>
-        <li><strong>TypeScript / JavaScript:</strong> Intermediate (Node.js, client-side web APIs)</li>
-        <li><strong>C / C++:</strong> Working knowledge (POSIX APIs, systems concepts, memory management)</li>
-        <li><strong>Shell Scripting:</strong> Advanced (Bash, POSIX sh)</li>
-        <li><strong>Query Languages:</strong> SQL (PostgreSQL, MySQL dialect)</li>
-      </ul>
+        <div class="skills-card">
+          <h4>Cloud &amp; Infrastructure</h4>
+          <ul>
+            <li><strong>Kubernetes &amp; Docker:</strong> Cluster administration, Helm</li>
+            <li><strong>Cloud Platforms:</strong> AWS (EKS, EC2, RDS), GCP</li>
+            <li><strong>IaC &amp; GitOps:</strong> Terraform, OpenTofu, ArgoCD</li>
+            <li><strong>CI/CD Pipelines:</strong> GitHub Actions, GitLab CI</li>
+            <li><strong>Observability:</strong> Prometheus, Grafana, OpenTelemetry</li>
+          </ul>
+        </div>
 
-      <h3>Cloud, Infrastructure &amp; DevOps</h3>
-      <ul>
-        <li><strong>Containerization &amp; Orchestration:</strong> Docker, Kubernetes, Helm</li>
-        <li><strong>Cloud Providers:</strong> Amazon Web Services (EKS, EC2, S3, RDS), Google Cloud Platform (GKE, Pub/Sub)</li>
-        <li><strong>Infrastructure as Code:</strong> Terraform, OpenTofu</li>
-        <li><strong>CI/CD &amp; GitOps:</strong> GitHub Actions, GitLab CI, ArgoCD</li>
-        <li><strong>Observability &amp; Monitoring:</strong> Prometheus, Grafana, OpenTelemetry, Jaeger</li>
-      </ul>
-
-      <h3>Databases &amp; Distributed Messaging</h3>
-      <ul>
-        <li><strong>Relational Databases:</strong> PostgreSQL, MySQL, SQLite</li>
-        <li><strong>In-Memory &amp; Caching:</strong> Redis, Memcached</li>
-        <li><strong>Message Brokers:</strong> Apache Kafka, RabbitMQ</li>
-      </ul>
+        <div class="skills-card">
+          <h4>Data &amp; Messaging Systems</h4>
+          <ul>
+            <li><strong>Databases:</strong> PostgreSQL, MySQL, SQLite</li>
+            <li><strong>In-Memory / Cache:</strong> Redis, Memcached</li>
+            <li><strong>Message Brokers:</strong> Apache Kafka, RabbitMQ</li>
+            <li><strong>Architecture:</strong> Event-driven, CQRS, REST, gRPC</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
-  <hr>
-
   <!-- Footer -->
-  <footer>
-    <p>
-      &copy; 2026 Alex Rivera. All rights reserved.
-      &bull; Built strictly with semantic HTML.
-      &bull; <a href="index.html">Back to Main Page</a>
-      &bull; <a href="#top">Back to top</a>
-    </p>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Main Page</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+      </div>
+      <p>&copy; 2026 Alex Rivera. All rights reserved. &bull; <a href="#top">Back to top &uarr;</a></p>
+    </div>
   </footer>
 
 </body>

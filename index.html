@@ -10,321 +10,238 @@
 
 <body>
 
-  <!-- Header Section -->
-  <header id="top">
-    <h1>Alex Rivera</h1>
-    <p><strong>Senior Software Engineer &amp; Systems Architect</strong></p>
-    <p>Designing reliable distributed systems, developer tools, and high-throughput data platforms.</p>
-
-    <nav aria-label="Page Navigation">
-      <p>
-        <a href="index.html">Home</a> |
-        <a href="resume.html">Resume</a> |
-        <a href="projects.html">Projects</a> |
-        <a href="#about">About</a> |
-        <a href="#skills">Skills</a> |
-        <a href="#experience">Experience</a> |
-        <a href="#projects">Projects Overview</a> |
-        <a href="#education">Education</a> |
-        <a href="#contact">Contact</a>
-      </p>
+  <!-- Global Header Navigation -->
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="nav-brand">Alex Rivera</a>
+      <div class="nav-links">
+        <a href="#intro" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About Me</a>
+        <a href="#directory" class="nav-link">Directory</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="resume.html" class="nav-link nav-btn-pill">Resume</a>
+        <a href="projects.html" class="nav-link nav-btn-pill">Projects</a>
+      </div>
     </nav>
   </header>
 
-  <hr>
-
-  <!-- Main Content -->
   <main>
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hello! I am a software engineer with over 8 years of experience building scalable backend services,
-        cloud-native platforms, and developer tooling. I focus on creating reliable, maintainable software
-        with emphasis on performance, observability, and straightforward architecture.
-      </p>
+    <!-- Section 1: Intro (Format of website1.png) -->
+    <section id="intro" class="intro-section" aria-label="Introduction">
+      <div class="intro-grid">
+        <!-- Shape on the left: Name and short introduction -->
+        <div class="intro-shape-left">
+          <p class="intro-tag">Senior Software Engineer &amp; Systems Architect</p>
+          <h1 class="intro-title">Alex Rivera</h1>
+          <p class="intro-description">
+            Designing reliable distributed systems, developer tools, and high-throughput cloud data platforms.
+          </p>
+          <p class="intro-meta">Seattle, WA &bull; 8+ Years Industry Experience</p>
+        </div>
 
-      <h3>Quick Facts</h3>
-      <dl>
-        <dt><strong>Location:</strong></dt>
-        <dd>Seattle, Washington, United States</dd>
-
-        <dt><strong>Current Role:</strong></dt>
-        <dd>Staff Infrastructure Engineer at CloudScale Technologies</dd>
-
-        <dt><strong>Specialties:</strong></dt>
-        <dd>Distributed Systems, Cloud Architecture, API Design, Performance Tuning</dd>
-
-        <dt><strong>Languages:</strong></dt>
-        <dd>English (Native), Spanish (Conversational)</dd>
-
-        <dt><strong>Interests:</strong></dt>
-        <dd>Open-source software, systems programming, cycling, and mechanical keyboards</dd>
-      </dl>
+        <!-- Shape on the right: Picture of me -->
+        <div class="intro-shape-right">
+          <img src="images/profile_hero.jpg" alt="Alex Rivera portrait" class="intro-portrait-circle">
+        </div>
+      </div>
     </section>
 
-    <hr>
+    <!-- Section 2: About Me (Format of website2.png) -->
+    <section id="about" class="about-section" aria-label="About Me">
+      <div class="about-grid">
+        <!-- Picture on the left as seen -->
+        <div class="about-image-wrapper">
+          <img src="images/about_me.jpg" alt="Alex Rivera working at desk" class="about-portrait">
+        </div>
 
-    <!-- Skills Section -->
-    <section id="skills">
-      <h2>Skills &amp; Technologies</h2>
+        <!-- Blurb on the right with title "About Me" -->
+        <div class="about-content">
+          <h2 class="about-heading">About Me</h2>
+          <p class="about-blurb">
+            Hello! I am a software engineer with over 8 years of experience building scalable backend services,
+            cloud-native platforms, and developer tooling. I focus on creating reliable, maintainable software
+            with emphasis on performance, observability, and straightforward architecture.
+          </p>
+          <p class="about-blurb">
+            Throughout my career at companies like CloudScale Technologies and Apex Data Systems, I have architected
+            multi-tenant Kubernetes platforms hosting hundreds of microservices, engineered high-throughput Kafka telemetry
+            pipelines processing over 1.2 million events per second, and designed internal developer CLIs adopted across 15 engineering squads.
+          </p>
+          <p class="about-blurb">
+            I hold a B.S. in Computer Science from the University of Washington (Cum Laude) and am a Certified Kubernetes
+            Administrator (CKA) and AWS Certified Solutions Architect &ndash; Professional. Outside of backend systems and distributed
+            computing, I enjoy cycling, open-source software, and mechanical keyboards.
+          </p>
 
-      <h3>Core Competencies</h3>
-      <ul>
-        <li>
-          <strong>Go:</strong> Advanced
-          <br>
-          <progress value="95" max="100">95%</progress>
-        </li>
-        <li>
-          <strong>Python:</strong> Advanced
-          <br>
-          <progress value="90" max="100">90%</progress>
-        </li>
-        <li>
-          <strong>Rust:</strong> Proficient
-          <br>
-          <progress value="80" max="100">80%</progress>
-        </li>
-        <li>
-          <strong>Kubernetes &amp; Cloud (AWS, GCP):</strong> Advanced
-          <br>
-          <progress value="90" max="100">90%</progress>
-        </li>
-        <li>
-          <strong>PostgreSQL &amp; Redis:</strong> Advanced
-          <br>
-          <progress value="85" max="100">85%</progress>
-        </li>
-      </ul>
-
-      <h3>Categorized Expertise</h3>
-      <details open>
-        <summary><strong>Languages &amp; Runtimes</strong></summary>
-        <ul>
-          <li>Go, Rust, Python, TypeScript, C/C++</li>
-          <li>Bash shell scripting, SQL</li>
-        </ul>
-      </details>
-
-      <details open>
-        <summary><strong>Infrastructure &amp; DevOps</strong></summary>
-        <ul>
-          <li>Docker, Kubernetes, Helm, Terraform, OpenTofu</li>
-          <li>AWS (EKS, EC2, S3, RDS), Google Cloud Platform (GKE, Pub/Sub)</li>
-          <li>CI/CD: GitHub Actions, GitLab CI, ArgoCD</li>
-        </ul>
-      </details>
-
-      <details open>
-        <summary><strong>Data &amp; Messaging</strong></summary>
-        <ul>
-          <li>PostgreSQL, MySQL, SQLite</li>
-          <li>Apache Kafka, RabbitMQ, Redis</li>
-          <li>Prometheus, Grafana, OpenTelemetry, Jaeger</li>
-        </ul>
-      </details>
+          <div class="about-highlights">
+            <div class="highlight-badge">
+              <strong>8+ Years</strong>
+              <span>Backend &amp; Cloud Experience</span>
+            </div>
+            <div class="highlight-badge">
+              <strong>Staff Level</strong>
+              <span>Systems Architecture</span>
+            </div>
+            <div class="highlight-badge">
+              <strong>Kubernetes &amp; Go</strong>
+              <span>Core Specialization</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <hr>
+    <!-- Section 3: Directory (Format of website3.png with 2 boxes) -->
+    <section id="directory" class="directory-section" aria-label="Directory">
+      <div class="section-header-center">
+        <h2 class="directory-title">Directory</h2>
+        <p class="directory-subtitle">Quick overview of career experience and featured engineering projects</p>
+      </div>
 
-    <!-- Experience Section -->
-    <section id="experience">
-      <h2>Work Experience</h2>
-      <p><a href="resume.html">View full resume on the dedicated Resume page &rarr;</a></p>
+      <div class="directory-grid-two">
+        <!-- Box 1 (Left): Work Experience -->
+        <div class="directory-card">
+          <img src="images/work_experience.jpg" alt="Work Experience" class="directory-card-img">
+          <h3 class="directory-card-title">Work Experience</h3>
+          
+          <ul class="directory-items">
+            <li class="directory-item">
+              <strong class="directory-item-title">Staff Infrastructure Engineer</strong>
+              <span class="directory-item-subtitle">CloudScale Technologies</span>
+              <span class="directory-item-meta">July 2022 &ndash; Present</span>
+            </li>
+            <li class="directory-item">
+              <strong class="directory-item-title">Senior Backend Engineer</strong>
+              <span class="directory-item-subtitle">Apex Data Systems</span>
+              <span class="directory-item-meta">March 2019 &ndash; June 2022</span>
+            </li>
+            <li class="directory-item">
+              <strong class="directory-item-title">Software Engineer</strong>
+              <span class="directory-item-subtitle">Beacon Networks</span>
+              <span class="directory-item-meta">June 2016 &ndash; February 2019</span>
+            </li>
+          </ul>
 
-      <article>
-        <h3>Staff Infrastructure Engineer &mdash; CloudScale Technologies</h3>
-        <p><em>July 2022 &ndash; Present | Seattle, WA (Remote)</em></p>
-        <ul>
-          <li>Architected multi-tenant Kubernetes platform hosting 200+ microservices across 3 global regions.</li>
-          <li>Spearheaded cluster autoscaling refactor that reduced cloud infrastructure spend by 28%.</li>
-          <li>Introduced standardized distributed tracing with OpenTelemetry, cutting p99 incident triage time by 45%.
-          </li>
-          <li>Mentored 6 senior and mid-level engineers on distributed systems patterns and resilient concurrency in Go.
-          </li>
-        </ul>
-      </article>
+          <div class="directory-card-footer">
+            <a href="resume.html" class="directory-btn-link">VIEW FULL RESUME &gt;</a>
+          </div>
+        </div>
 
-      <article>
-        <h3>Senior Backend Engineer &mdash; Apex Data Systems</h3>
-        <p><em>March 2019 &ndash; June 2022 | San Francisco, CA</em></p>
-        <ul>
-          <li>Built high-throughput telemetry ingestion pipeline handling over 1.2 million events per second with Kafka
-            and Go.</li>
-          <li>Redesigned relational schema and caching strategy in PostgreSQL and Redis, decreasing average query
-            latency from 85ms to 12ms.</li>
-          <li>Led development of internal developer CLI adopted across all 15 engineering squads.</li>
-        </ul>
-      </article>
+        <!-- Box 2 (Right): Projects -->
+        <div class="directory-card">
+          <img src="images/projects_preview.jpg" alt="Projects" class="directory-card-img">
+          <h3 class="directory-card-title">Projects</h3>
 
-      <article>
-        <h3>Software Engineer &mdash; Beacon Networks</h3>
-        <p><em>June 2016 &ndash; February 2019 | Austin, TX</em></p>
-        <ul>
-          <li>Developed RESTful API endpoints and background task queues using Python, Django, and Celery.</li>
-          <li>Automated provisioning of test environments with Docker Compose and Bash scripts.</li>
-          <li>Participated in 24/7 on-call rotation with an average MTTR of 15 minutes.</li>
-        </ul>
-      </article>
+          <ul class="directory-items">
+            <li class="directory-item">
+              <strong class="directory-item-title">KubeScope</strong>
+              <span class="directory-item-subtitle">Cloud Infrastructure &bull; Independent / OSS</span>
+              <span class="directory-item-meta">Go, client-go, Cobra, Kubernetes API</span>
+            </li>
+            <li class="directory-item">
+              <strong class="directory-item-title">MiniKV</strong>
+              <span class="directory-item-subtitle">Operating Systems &amp; Storage Engines &bull; Systems Research</span>
+              <span class="directory-item-meta">Rust, Concurrency, WAL, Bloom Filters</span>
+            </li>
+            <li class="directory-item">
+              <strong class="directory-item-title">TraceFlow</strong>
+              <span class="directory-item-subtitle">Distributed Systems Observability &bull; CloudScale Labs</span>
+              <span class="directory-item-meta">Python, Asyncio, OpenTelemetry SDK, Docker</span>
+            </li>
+          </ul>
+
+          <div class="directory-card-footer">
+            <a href="projects.html" class="directory-btn-link">VIEW ALL PROJECTS &gt;</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <hr>
+    <!-- Section 4: Contact -->
+    <section id="contact" class="contact-section" aria-label="Contact">
+      <div class="section-header-center">
+        <h2 class="directory-title">Contact</h2>
+        <p class="directory-subtitle">Get in touch for consulting, speaking engagements, or engineering collaboration</p>
+      </div>
 
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>Selected Projects</h2>
-      <p><a href="projects.html">View all projects on the dedicated Projects page &rarr;</a></p>
+      <div class="contact-grid">
+        <!-- Space for email, linkedin, and location -->
+        <div class="contact-info-cards">
+          <div class="contact-card">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">
+              <a href="mailto:alex.rivera.example@gmail.com">alex.rivera.example@gmail.com</a>
+            </span>
+          </div>
 
-      <article>
-        <h3>KubeScope &ndash; Kubernetes Cluster Resource Auditor</h3>
-        <p>
-          A fast, lightweight CLI tool written in Go that scans Kubernetes clusters for misconfigured resource limits,
-          unhealthy workloads, and stale deployments.
-        </p>
-        <ul>
-          <li><strong>Tech:</strong> Go, client-go, Cobra, GitHub Actions</li>
-          <li><strong>Links:</strong> <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source
-              Code</a> | <a href="https://github.com" target="_blank" rel="noopener noreferrer">Documentation</a></li>
-        </ul>
-      </article>
+          <div class="contact-card">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">linkedin.com/in/alexrivera-dev</a>
+            </span>
+          </div>
 
-      <article>
-        <h3>MiniKV &ndash; Embedded LSM-Tree Key-Value Store</h3>
-        <p>
-          An educational Log-Structured Merge-tree storage engine implemented in Rust to study WAL crash recovery,
-          SSTable compaction strategies, and Bloom filter optimizations.
-        </p>
-        <ul>
-          <li><strong>Tech:</strong> Rust, Concurrency, File I/O</li>
-          <li><strong>Links:</strong> <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source
-              Code</a> | <a href="https://github.com" target="_blank" rel="noopener noreferrer">Technical Writeup</a>
-          </li>
-        </ul>
-      </article>
+          <div class="contact-card">
+            <span class="contact-label">Location</span>
+            <span class="contact-value">Seattle, Washington, United States</span>
+          </div>
 
-      <article>
-        <h3>TraceFlow &ndash; OpenTelemetry Pipeline Simulator</h3>
-        <p>
-          Synthetic trace generator and benchmark tool used to validate collectors and backends under extreme traffic
-          spikes.
-        </p>
-        <ul>
-          <li><strong>Tech:</strong> Python, Asyncio, OpenTelemetry SDK, Docker</li>
-          <li><strong>Links:</strong> <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source
-              Code</a></li>
-        </ul>
-      </article>
-    </section>
+          <div class="contact-card">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">github.com/alexrivera-dev</a>
+            </span>
+          </div>
+        </div>
 
-    <hr>
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" class="form-input" required placeholder="Jane Doe">
+            </div>
 
-    <!-- Education & Credentials Section -->
-    <section id="education">
-      <h2>Education &amp; Certifications</h2>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" class="form-input" required placeholder="jane@example.com">
+            </div>
 
-      <table border="1" cellpadding="8" cellspacing="0">
-        <caption>Academic Background &amp; Professional Certifications</caption>
-        <thead>
-          <tr>
-            <th scope="col">Degree / Certificate</th>
-            <th scope="col">Institution / Issuer</th>
-            <th scope="col">Year</th>
-            <th scope="col">Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>B.S. in Computer Science</td>
-            <td>University of Washington</td>
-            <td>2012 &ndash; 2016</td>
-            <td>Graduated Cum Laude; Focus on Operating Systems &amp; Networking</td>
-          </tr>
-          <tr>
-            <td>Certified Kubernetes Administrator (CKA)</td>
-            <td>Cloud Native Computing Foundation (CNCF)</td>
-            <td>2023</td>
-            <td>Credential ID: CKA-2309-8472</td>
-          </tr>
-          <tr>
-            <td>AWS Certified Solutions Architect &ndash; Professional</td>
-            <td>Amazon Web Services</td>
-            <td>2022</td>
-            <td>Credential ID: AWS-SAP-9104</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" class="form-select">
+                <option value="general">General Inquiry</option>
+                <option value="consulting">Consulting / Contracting</option>
+                <option value="speaking">Speaking / Conference</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
 
-    <hr>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" class="form-textarea" required placeholder="Write your message here..."></textarea>
+            </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Feel free to reach out for consulting opportunities, speaking engagements, or technical inquiries.</p>
-
-      <address>
-        <p>
-          <strong>Email:</strong> <a href="mailto:alex.rivera.example@gmail.com">alex.rivera.example@gmail.com</a><br>
-          <strong>GitHub:</strong> <a href="https://github.com" target="_blank"
-            rel="noopener noreferrer">github.com/alexrivera-dev</a><br>
-          <strong>LinkedIn:</strong> <a href="https://linkedin.com" target="_blank"
-            rel="noopener noreferrer">linkedin.com/in/alexrivera-dev</a><br>
-          <strong>Location:</strong> Seattle, WA
-        </p>
-      </address>
-
-      <h3>Send a Message</h3>
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Contact Form</legend>
-
-          <p>
-            <label for="name">Your Name: <em>(required)</em></label><br>
-            <input type="text" id="name" name="name" required placeholder="Jane Doe">
-          </p>
-
-          <p>
-            <label for="email">Your Email: <em>(required)</em></label><br>
-            <input type="email" id="email" name="email" required placeholder="jane@example.com">
-          </p>
-
-          <p>
-            <label for="subject">Subject:</label><br>
-            <select id="subject" name="subject">
-              <option value="general">General Inquiry</option>
-              <option value="consulting">Consulting / Contracting</option>
-              <option value="speaking">Speaking / Conference</option>
-              <option value="other">Other</option>
-            </select>
-          </p>
-
-          <p>
-            <label for="message">Message: <em>(required)</em></label><br>
-            <textarea id="message" name="message" rows="6" cols="50" required
-              placeholder="Write your message here..."></textarea>
-          </p>
-
-          <p>
-            <button type="submit">Send Message</button>
-            <button type="reset">Clear Form</button>
-          </p>
-        </fieldset>
-      </form>
+            <button type="submit" class="form-btn-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 
-  <hr>
-
   <!-- Footer -->
-  <footer>
-    <p>
-      &copy; 2026 Alex Rivera. All rights reserved.
-      &bull; Built strictly with semantic HTML.
-      &bull; <a href="resume.html">Resume</a>
-      &bull; <a href="projects.html">Projects</a>
-      &bull; <a href="#top">Back to top</a>
-    </p>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#intro">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#directory">Directory</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+      </div>
+      <p>&copy; 2026 Alex Rivera. All rights reserved. &bull; <a href="#intro">Back to top &uarr;</a></p>
+    </div>
   </footer>
 
 </body>

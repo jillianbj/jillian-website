@@ -10,134 +10,148 @@
 
 <body>
 
-  <!-- Header Section -->
-  <header id="top">
-    <h1>Alex Rivera &ndash; Projects</h1>
-    <p><strong>Open-Source Tools, Systems Architecture &amp; Engineering Projects</strong></p>
-    <p>A portfolio of distributed systems, developer utilities, and backend engineering work.</p>
-
-    <nav aria-label="Page Navigation">
-      <p>
-        <a href="index.html">Home (Main Page)</a> |
-        <a href="resume.html">Resume</a> |
-        <a href="projects.html" aria-current="page">Projects</a> |
-        <a href="#featured">Featured Projects</a> |
-        <a href="#all-projects">Project Catalog</a>
-      </p>
-    </nav>
-    <p><a href="index.html">&larr; Back to Main Page</a></p>
+  <!-- Dark Grey Header at the Top -->
+  <header class="subpage-header" id="top">
+    <div class="subpage-header-content">
+      <h1 class="subpage-title">Alex Rivera &ndash; Projects</h1>
+      <p class="subpage-subtitle">A showcase of distributed systems, developer utilities, and backend engineering work.</p>
+      
+      <nav class="subpage-nav" aria-label="Page Navigation">
+        <a href="index.html" class="subpage-nav-link">&larr; Main Page</a>
+        <a href="resume.html" class="subpage-nav-link">Resume</a>
+        <a href="projects.html" class="subpage-nav-link active">Projects</a>
+        <a href="#featured" class="subpage-nav-link">Featured</a>
+        <a href="#catalog" class="subpage-nav-link">Catalog</a>
+      </nav>
+    </div>
   </header>
 
-  <hr>
-
-  <!-- Main Content -->
-  <main>
-    <!-- Featured Projects Section -->
-    <section id="featured">
-      <h2>Featured Projects</h2>
+  <!-- Main Content on Light Beige Background -->
+  <main class="subpage-container">
+    <section id="featured" class="subpage-section">
+      <h2 class="subpage-section-title">Featured Projects</h2>
 
       <!-- Project 1: KubeScope -->
-      <article id="kubescope">
-        <h3>1. KubeScope &ndash; Kubernetes Cluster Resource Auditor</h3>
-        <p>
+      <article class="project-card-detail" id="kubescope">
+        <h3 class="project-detail-title">1. KubeScope &ndash; Kubernetes Cluster Resource Auditor</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem;">
+          <strong>Domain:</strong> Cloud Infrastructure &amp; Kubernetes &bull; <strong>License:</strong> Apache 2.0
+        </p>
+        <div style="margin-bottom: 1rem;">
+          <span class="project-tag-pill">Go</span>
+          <span class="project-tag-pill">client-go</span>
+          <span class="project-tag-pill">Cobra CLI</span>
+          <span class="project-tag-pill">Kubernetes API</span>
+          <span class="project-tag-pill">GitHub Actions</span>
+        </div>
+        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-brown); margin-bottom: 1rem;">
           A fast, lightweight command-line tool written in Go that inspects Kubernetes clusters for misconfigured
           resource requests and limits, unhealthy pod workloads, orphaned persistent volumes, and stale deployments.
         </p>
-        <h4>Key Features:</h4>
-        <ul>
+        <ul class="resume-list" style="margin-bottom: 1.25rem;">
           <li>Interactive and JSON-formatted reports analyzing cluster-wide resource efficiency.</li>
           <li>Out-of-the-box recommendations for right-sizing pod CPU and memory requests.</li>
           <li>Pluggable rules engine built with Go client-go and Cobra CLI framework.</li>
           <li>Easily integrates into CI/CD pipelines via GitHub Actions.</li>
         </ul>
-        <p>
-          <strong>Technologies:</strong> Go, client-go, Cobra, Kubernetes API, GitHub Actions, Docker<br>
-          <strong>Links:</strong>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code</a> |
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Documentation</a>
-        </p>
+        <div class="project-detail-links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Source Code &rarr;</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Documentation &rarr;</a>
+        </div>
       </article>
 
-      <hr>
-
       <!-- Project 2: MiniKV -->
-      <article id="minikv">
-        <h3>2. MiniKV &ndash; Embedded LSM-Tree Key-Value Store</h3>
-        <p>
+      <article class="project-card-detail" id="minikv">
+        <h3 class="project-detail-title">2. MiniKV &ndash; Embedded LSM-Tree Key-Value Store</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem;">
+          <strong>Domain:</strong> Operating Systems &amp; Storage Engines &bull; <strong>License:</strong> MIT
+        </p>
+        <div style="margin-bottom: 1rem;">
+          <span class="project-tag-pill">Rust</span>
+          <span class="project-tag-pill">Concurrency</span>
+          <span class="project-tag-pill">Write-Ahead Log</span>
+          <span class="project-tag-pill">SSTables</span>
+          <span class="project-tag-pill">Bloom Filters</span>
+        </div>
+        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-brown); margin-bottom: 1rem;">
           An educational Log-Structured Merge-tree (LSM-tree) storage engine implemented in Rust to study
           Write-Ahead Log (WAL) crash recovery, SSTable compaction strategies, and Bloom filter optimizations.
         </p>
-        <h4>Key Features:</h4>
-        <ul>
+        <ul class="resume-list" style="margin-bottom: 1.25rem;">
           <li>MemTable implementation backed by a lock-free SkipList for concurrent in-memory writes.</li>
           <li>Write-Ahead Logging with checksum verification ensuring durability against unexpected power loss.</li>
           <li>Size-tiered compaction strategy to bound read amplification and reclaim disk space.</li>
           <li>Block-level Bloom filters reducing unnecessary disk reads for non-existent keys.</li>
         </ul>
-        <p>
-          <strong>Technologies:</strong> Rust, Concurrency, File I/O, Data Structures, Benchmarking<br>
-          <strong>Links:</strong>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code</a> |
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Technical Writeup</a>
-        </p>
+        <div class="project-detail-links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Source Code &rarr;</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Technical Writeup &rarr;</a>
+        </div>
       </article>
 
-      <hr>
-
       <!-- Project 3: TraceFlow -->
-      <article id="traceflow">
-        <h3>3. TraceFlow &ndash; OpenTelemetry Pipeline Simulator</h3>
-        <p>
+      <article class="project-card-detail" id="traceflow">
+        <h3 class="project-detail-title">3. TraceFlow &ndash; OpenTelemetry Pipeline Simulator</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem;">
+          <strong>Domain:</strong> Distributed Observability &amp; Testing &bull; <strong>License:</strong> Apache 2.0
+        </p>
+        <div style="margin-bottom: 1rem;">
+          <span class="project-tag-pill">Python</span>
+          <span class="project-tag-pill">Asyncio</span>
+          <span class="project-tag-pill">OpenTelemetry SDK</span>
+          <span class="project-tag-pill">gRPC</span>
+          <span class="project-tag-pill">Docker</span>
+        </div>
+        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-brown); margin-bottom: 1rem;">
           Synthetic distributed trace generator and benchmarking suite designed to validate OpenTelemetry collectors,
           agents, and backend storage engines under extreme traffic spikes and bursty network conditions.
         </p>
-        <h4>Key Features:</h4>
-        <ul>
+        <ul class="resume-list" style="margin-bottom: 1.25rem;">
           <li>Simulates complex microservice topologies with customizable call depths and error injection rates.</li>
           <li>Exports spans in OTLP/gRPC and OTLP/HTTP protocols with configurable sampling rates.</li>
           <li>Provides real-time throughput and latency metrics comparing collector resource utilization.</li>
           <li>Fully packaged with Docker Compose for local development and integration tests.</li>
         </ul>
-        <p>
-          <strong>Technologies:</strong> Python, Asyncio, OpenTelemetry SDK, gRPC, Docker, Prometheus<br>
-          <strong>Links:</strong>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code</a> |
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Documentation</a>
-        </p>
+        <div class="project-detail-links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Source Code &rarr;</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Documentation &rarr;</a>
+        </div>
       </article>
 
-      <hr>
-
       <!-- Project 4: NetPulse -->
-      <article id="netpulse">
-        <h3>4. NetPulse &ndash; eBPF Network Latency &amp; Packet Monitor</h3>
-        <p>
+      <article class="project-card-detail" id="netpulse">
+        <h3 class="project-detail-title">4. NetPulse &ndash; eBPF Network Latency &amp; Packet Monitor</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem;">
+          <strong>Domain:</strong> Linux Kernel &amp; Networking &bull; <strong>License:</strong> GPL v2
+        </p>
+        <div style="margin-bottom: 1rem;">
+          <span class="project-tag-pill">Go</span>
+          <span class="project-tag-pill">C</span>
+          <span class="project-tag-pill">eBPF</span>
+          <span class="project-tag-pill">Linux Kernel</span>
+          <span class="project-tag-pill">Prometheus</span>
+        </div>
+        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-brown); margin-bottom: 1rem;">
           A low-overhead Linux kernel observability tool that leverages eBPF (extended Berkeley Packet Filter)
           to measure TCP connection round-trip times and identify packet drops without application code modification.
         </p>
-        <h4>Key Features:</h4>
-        <ul>
+        <ul class="resume-list" style="margin-bottom: 1.25rem;">
           <li>Attaches kernel probes to TCP state machine transitions with sub-microsecond overhead.</li>
           <li>Exports Prometheus metrics for TCP retransmissions, SYN backlog queue saturation, and socket latency.</li>
           <li>Lightweight Go userspace daemon for metric aggregation and filtering.</li>
         </ul>
-        <p>
-          <strong>Technologies:</strong> Go, C, eBPF, Linux Kernel, Prometheus, Grafana<br>
-          <strong>Links:</strong>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code</a> |
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Architecture Spec</a>
-        </p>
+        <div class="project-detail-links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Source Code &rarr;</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Architecture Spec &rarr;</a>
+        </div>
       </article>
     </section>
 
-    <hr>
+    <!-- Catalog Section -->
+    <section id="catalog" class="subpage-section">
+      <h2 class="subpage-section-title">Project Catalog &amp; Summary</h2>
 
-    <!-- Project Catalog / Summary Table -->
-    <section id="all-projects">
-      <h2>Project Catalog &amp; Summary</h2>
-
-      <table border="1" cellpadding="8" cellspacing="0">
-        <caption>Summary of Projects</caption>
+      <table class="data-table">
         <thead>
           <tr>
             <th scope="col">Project Name</th>
@@ -149,28 +163,28 @@
         </thead>
         <tbody>
           <tr>
-            <td>KubeScope</td>
+            <td><strong>KubeScope</strong></td>
             <td>Go</td>
             <td>Cloud Infrastructure &amp; Kubernetes</td>
             <td>Apache 2.0</td>
             <td>Active</td>
           </tr>
           <tr>
-            <td>MiniKV</td>
+            <td><strong>MiniKV</strong></td>
             <td>Rust</td>
             <td>Database &amp; Storage Engines</td>
             <td>MIT</td>
             <td>Stable</td>
           </tr>
           <tr>
-            <td>TraceFlow</td>
+            <td><strong>TraceFlow</strong></td>
             <td>Python</td>
             <td>Observability &amp; Testing</td>
             <td>Apache 2.0</td>
             <td>Active</td>
           </tr>
           <tr>
-            <td>NetPulse</td>
+            <td><strong>NetPulse</strong></td>
             <td>Go / C</td>
             <td>Networking &amp; eBPF</td>
             <td>GPL v2</td>
@@ -181,16 +195,16 @@
     </section>
   </main>
 
-  <hr>
-
   <!-- Footer -->
-  <footer>
-    <p>
-      &copy; 2026 Alex Rivera. All rights reserved.
-      &bull; Built strictly with semantic HTML.
-      &bull; <a href="index.html">Back to Main Page</a>
-      &bull; <a href="#top">Back to top</a>
-    </p>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Main Page</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+      </div>
+      <p>&copy; 2026 Alex Rivera. All rights reserved. &bull; <a href="#top">Back to top &uarr;</a></p>
+    </div>
   </footer>
 
 </body>
