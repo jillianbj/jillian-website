@@ -10,27 +10,27 @@
   --bg-beige: #F6F2EA;
   --bg-beige-card: #ECE6DA;
   --bg-white: #FFFDF9;
-  
+
   /* Dark Grey Secondary Color System */
   --grey: #2B2D33;
   --grey-dark: #1E2024;
   --grey-card: #373A41;
   --grey-surface: #42464F;
   --grey-hover: #4F535D;
-  
+
   /* Backward Compatibility Aliases */
   --navy: var(--grey);
   --navy-dark: var(--grey-dark);
   --navy-card: var(--grey-card);
   --navy-surface: var(--grey-surface);
   --navy-hover: var(--grey-hover);
-  
+
   --brown: var(--grey);
   --brown-dark: var(--grey-dark);
   --brown-card: var(--grey-card);
   --brown-surface: var(--grey-surface);
   --brown-hover: var(--grey-hover);
-  
+
   /* Typography Colors */
   --text-dark: #1A1C20;
   --text-brown: var(--text-dark);
@@ -38,15 +38,15 @@
   --text-muted: #5C606B;
   --text-light: #FFFFFF;
   --text-subtle: #D8DAE2;
-  
+
   /* Modern Accent (Refined Steel Slate / Soft Cyan) */
-  --accent-color: #5E94C7;
-  --accent-color-hover: #82B0DD;
+  --accent-color: #e3caa4;
+  --accent-color-hover: #f7dfbb;
   --accent-warm: var(--accent-color);
   --accent-warm-hover: var(--accent-color-hover);
   --accent-blue: var(--accent-color);
   --accent-blue-hover: var(--accent-color-hover);
-  
+
   --border-beige: #E2DBD0;
   --border-light: rgba(255, 255, 255, 0.16);
 
@@ -62,7 +62,9 @@
 }
 
 /* Base Styles */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
