@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Rivera | Projects</title>
+  <title>Jillian Johnson | Projects</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -13,9 +13,9 @@
   <!-- Dark Grey Header at the Top -->
   <header class="subpage-header" id="top">
     <div class="subpage-header-content">
-      <h1 class="subpage-title">Alex Rivera &ndash; Projects</h1>
-      <p class="subpage-subtitle">A showcase of distributed systems, developer utilities, and backend engineering work.</p>
-      
+      <h1 class="subpage-title">Jillian Johnson &ndash; Projects</h1>
+      <p class="subpage-subtitle">A showcase of data analytics projects and academic work.</p>
+
       <nav class="subpage-nav" aria-label="Page Navigation">
         <a href="index.html" class="subpage-nav-link">&larr; Main Page</a>
         <a href="resume.html" class="subpage-nav-link">Resume</a>
@@ -29,119 +29,106 @@
     <section id="featured" class="subpage-section">
       <h2 class="subpage-section-title">Featured Projects</h2>
 
-      <!-- Project 1: KubeScope -->
+      <!-- Project 1: ETF Performance Replication -->
       <article class="project-card-detail" id="kubescope">
-        <h3 class="project-detail-title">1. KubeScope &ndash; Kubernetes Cluster Resource Auditor</h3>
+        <h3 class="project-detail-title">ETF Performance Replication</h3>
         <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem;">
-          <strong>Domain:</strong> Cloud Infrastructure &amp; Kubernetes &bull; <strong>License:</strong> Apache 2.0
+          <strong>Domain:</strong> Financial Modeling and Analytics Course &bull; Honors Project
         </p>
         <div style="margin-bottom: 1rem;">
-          <span class="project-tag-pill">Go</span>
-          <span class="project-tag-pill">client-go</span>
-          <span class="project-tag-pill">Cobra CLI</span>
-          <span class="project-tag-pill">Kubernetes API</span>
-          <span class="project-tag-pill">GitHub Actions</span>
+          <span class="project-tag-pill">Python</span>
+          <span class="project-tag-pill">yfinance</span>
+          <span class="project-tag-pill">matplotlib</span>
+          <span class="project-tag-pill">pandas</span>
         </div>
         <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-brown); margin-bottom: 1rem;">
-          A fast, lightweight command-line tool written in Go that inspects Kubernetes clusters for misconfigured
-          resource requests and limits, unhealthy pod workloads, orphaned persistent volumes, and stale deployments.
+          A Python program that replicates the performance of a specific Exchange Traded Fund (ETF) using
+          its documentation and data from Yahoo Finance.
         </p>
         <ul class="resume-list" style="margin-bottom: 1.25rem;">
-          <li>Interactive and JSON-formatted reports analyzing cluster-wide resource efficiency.</li>
-          <li>Out-of-the-box recommendations for right-sizing pod CPU and memory requests.</li>
-          <li>Pluggable rules engine built with Go client-go and Cobra CLI framework.</li>
-          <li>Easily integrates into CI/CD pipelines via GitHub Actions.</li>
+          <li>Jupiter Notebook formatted program written in Google Colab.</li>
+          <li>Generates indicator triggers, determines index exposure, and assigns etf weights.</li>
+          <li>Calculates ETF returns and cumulative performance.</li>
+          <li>Compares the replicated ETF performance to the actual ETF performance and analyzes using data
+            visualizations.</li>
         </ul>
         <div class="project-detail-links">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Source Code &rarr;</a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Documentation &rarr;</a>
+          <a href="https://colab.research.google.com/drive/1by6rJ04UxIw2XyKxMWDPe8HFTVwtK8JL?usp=sharing"
+            target="_blank" rel="noopener noreferrer" class="btn-secondary">Source Code &rarr;</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Report &rarr;</a>
         </div>
       </article>
 
-      <!-- Project 2: MiniKV -->
+      <!-- Project 2: Loan Approval -->
       <article class="project-card-detail" id="minikv">
-        <h3 class="project-detail-title">2. MiniKV &ndash; Embedded LSM-Tree Key-Value Store</h3>
+        <h3 class="project-detail-title">Predictive Model for Loan Approval</h3>
         <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem;">
-          <strong>Domain:</strong> Operating Systems &amp; Storage Engines &bull; <strong>License:</strong> MIT
+          <strong>Domain:</strong> Predictive Analytics Course &bull; Final Project
         </p>
         <div style="margin-bottom: 1rem;">
-          <span class="project-tag-pill">Rust</span>
-          <span class="project-tag-pill">Concurrency</span>
-          <span class="project-tag-pill">Write-Ahead Log</span>
-          <span class="project-tag-pill">SSTables</span>
-          <span class="project-tag-pill">Bloom Filters</span>
+          <span class="project-tag-pill">JMP</span>
+          <span class="project-tag-pill">Machine Learning</span>
+          <span class="project-tag-pill">Data modeling and visualization</span>
         </div>
         <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-brown); margin-bottom: 1rem;">
-          An educational Log-Structured Merge-tree (LSM-tree) storage engine implemented in Rust to study
-          Write-Ahead Log (WAL) crash recovery, SSTable compaction strategies, and Bloom filter optimizations.
+          A report identifying the most effective predictive model for evaluating risks and determining likelihood of
+          loan approval.
         </p>
         <ul class="resume-list" style="margin-bottom: 1.25rem;">
-          <li>MemTable implementation backed by a lock-free SkipList for concurrent in-memory writes.</li>
-          <li>Write-Ahead Logging with checksum verification ensuring durability against unexpected power loss.</li>
-          <li>Size-tiered compaction strategy to bound read amplification and reclaim disk space.</li>
-          <li>Block-level Bloom filters reducing unnecessary disk reads for non-existent keys.</li>
+          <li>Used JMP to prepare and analyze HDMA data and compare accuracy of various machine learning models.</li>
+          <li>Compared models: k-NN, logistic regression, neural networ, decision tree, and average model.</li>
+          <li>Presented findings on the project's process and effectiveness of each model.</li>
         </ul>
         <div class="project-detail-links">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Source Code &rarr;</a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Technical Writeup &rarr;</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Technical Writeup
+            &rarr;</a>
         </div>
       </article>
 
       <!-- Project 3: TraceFlow -->
       <article class="project-card-detail" id="traceflow">
-        <h3 class="project-detail-title">3. TraceFlow &ndash; OpenTelemetry Pipeline Simulator</h3>
+        <h3 class="project-detail-title">Sports Popularity Influence on the Industry's Accounting Metrics</h3>
         <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem;">
-          <strong>Domain:</strong> Distributed Observability &amp; Testing &bull; <strong>License:</strong> Apache 2.0
+          <strong>Domain:</strong> Accounting Analytics Course &bull; Honors Project
         </p>
         <div style="margin-bottom: 1rem;">
-          <span class="project-tag-pill">Python</span>
-          <span class="project-tag-pill">Asyncio</span>
-          <span class="project-tag-pill">OpenTelemetry SDK</span>
-          <span class="project-tag-pill">gRPC</span>
-          <span class="project-tag-pill">Docker</span>
+          <span class="project-tag-pill">PowerBI</span>
+          <span class="project-tag-pill">Microsoft Excel</span>
+          <span class="project-tag-pill">Microsoft PowerPoint</span>
         </div>
         <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-brown); margin-bottom: 1rem;">
-          Synthetic distributed trace generator and benchmarking suite designed to validate OpenTelemetry collectors,
-          agents, and backend storage engines under extreme traffic spikes and bursty network conditions.
+          A data analysis presentation with the collaboration of three classmates, analyzing the correlation between a
+          sport's popularity and the accounting metrics of their associated organizations.
         </p>
         <ul class="resume-list" style="margin-bottom: 1.25rem;">
-          <li>Simulates complex microservice topologies with customizable call depths and error injection rates.</li>
-          <li>Exports spans in OTLP/gRPC and OTLP/HTTP protocols with configurable sampling rates.</li>
-          <li>Provides real-time throughput and latency metrics comparing collector resource utilization.</li>
-          <li>Fully packaged with Docker Compose for local development and integration tests.</li>
+          <li>Analyze and clean NAICS data for the sports entertainment industry in Excel.</li>
+          <li>Create data visualizations in PowerBI to demonstrate the correlation between the popularity of each sport
+            and
+            the financial performance of their associated organizations.</li>
+          <li>Create a presentation in PowerPoint to present our findings to the class.</li>
         </ul>
-        <div class="project-detail-links">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Source Code &rarr;</a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Documentation &rarr;</a>
-        </div>
       </article>
 
-      <!-- Project 4: NetPulse -->
+      <!-- Project 4: Investment Scenarios -->
       <article class="project-card-detail" id="netpulse">
-        <h3 class="project-detail-title">4. NetPulse &ndash; eBPF Network Latency &amp; Packet Monitor</h3>
+        <h3 class="project-detail-title">Investment Scenarios</h3>
         <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem;">
-          <strong>Domain:</strong> Linux Kernel &amp; Networking &bull; <strong>License:</strong> GPL v2
+          <strong>Domain:</strong> Financial Modeling and Analytics Course &bull; Midterm Project
         </p>
         <div style="margin-bottom: 1rem;">
-          <span class="project-tag-pill">Go</span>
-          <span class="project-tag-pill">C</span>
-          <span class="project-tag-pill">eBPF</span>
-          <span class="project-tag-pill">Linux Kernel</span>
-          <span class="project-tag-pill">Prometheus</span>
+          <span class="project-tag-pill">Financial Modeling</span>
+          <span class="project-tag-pill">Python</span>
+          <span class="project-tag-pill">numpy</span>
+          <span class="project-tag-pill">matplotlib</span>
         </div>
         <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-brown); margin-bottom: 1rem;">
-          A low-overhead Linux kernel observability tool that leverages eBPF (extended Berkeley Packet Filter)
-          to measure TCP connection round-trip times and identify packet drops without application code modification.
+          Used Monte Carlo simulations to model different investment scenarios. Analyzed the risks
+          and potential returns of each scenario using data visualizations and statistical analysis.
         </p>
         <ul class="resume-list" style="margin-bottom: 1.25rem;">
-          <li>Attaches kernel probes to TCP state machine transitions with sub-microsecond overhead.</li>
-          <li>Exports Prometheus metrics for TCP retransmissions, SYN backlog queue saturation, and socket latency.</li>
-          <li>Lightweight Go userspace daemon for metric aggregation and filtering.</li>
+          <li>Calculated disposable income, portfolio returns, and final wealth.</li>
+          <li>Ran 10,000 simulations for each scenario to analyze the risks and potential returns.</li>
         </ul>
-        <div class="project-detail-links">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Source Code &rarr;</a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Architecture Spec &rarr;</a>
-        </div>
       </article>
     </section>
 
@@ -156,7 +143,7 @@
         <a href="resume.html">Resume</a>
         <a href="projects.html">Projects</a>
       </div>
-      <p>&copy; 2026 Alex Rivera. All rights reserved. &bull; <a href="#top">Back to top &uarr;</a></p>
+      <p> 2026 Jillian Johnson <a href="#top">Back to top &uarr;</a></p>
     </div>
   </footer>
 
